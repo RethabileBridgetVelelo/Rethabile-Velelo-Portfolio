@@ -1,0 +1,90 @@
+// knowledge.js - the in-page "knowledge base" the AI uses
+const knowledgeBase = {
+  about: `Rethabile Bridget Velelo is an aspiring software developer focused on front-end development, networking, and AI/ML prototyping. She builds interactive web experiences, participates in hackathons, and values clarity, accessibility, and design that helps people.`,
+  qualifications: [
+    "Higher Certificate in Information Technology",
+    "Programming Logic and Design (PRLD5121)",
+    "Courses: HTML/CSS, JavaScript, Intro to ML",
+    "Workshop: Web accessibility & UX fundamentals"
+  ],
+  projects: [
+    // 50 projects (unique names) — short names here; JS will include descriptions
+    "Networking Setup",
+    "Personal Portfolio",
+    "RethAI Assistant",
+    "Agriculture Application",
+    "Hackathon Tracker",
+    "Frontend Dashboard",
+    "ML Image Classifier",
+    "Crypto Payment System",
+    "Weather App",
+    "Chatbot System",
+    "Portfolio Analytics",
+    "Social Media Clone",
+    "E-Commerce Site",
+    "Task Manager",
+    "Blog Platform",
+    "Fitness Tracker",
+    "Expense Manager",
+    "Calendar Scheduler",
+    "AI Chat Portal",
+    "Recipe Finder",
+    "Travel Planner",
+    "Stock Tracker",
+    "News Aggregator",
+    "Crypto Wallet",
+    "Book Review App",
+    "Music Player",
+    "Video Streaming App",
+    "Quiz Maker",
+    "Language Translator",
+    "Portfolio V2",
+    "IoT Device Monitor",
+    "Home Automation",
+    "Virtual Classroom",
+    "AI Image Generator",
+    "Portfolio AI CV",
+    "Data Visualization Tool",
+    "Interactive Maps",
+    "Gaming Leaderboard",
+    "Health Monitoring",
+    "Smart Notes",
+    "ChatGPT Assistant",
+    "Food Delivery App",
+    "Task Automation",
+    "Weather Dashboard",
+    "Movie Finder",
+    "Portfolio AI Analytics",
+    "Portfolio Dark Theme",
+    "Portfolio Light Theme",
+    "Hackathon Submission Tracker",
+    "Portfolio AI Projects"
+  ],
+  descriptions: {
+    // short descriptions — you can expand later
+    "Networking Setup": "Design and setup of small LAN/WAN with documentation and troubleshooting scripts.",
+    "Personal Portfolio": "This site — interactive portfolio built with HTML/CSS/JS, showcasing projects and CV.",
+    "RethAI Assistant": "A local in-page AI assistant prototype that answers portfolio-based questions and uses TTS.",
+    "Agriculture Application": "A web app prototype for smallholder farmers to manage crops and inputs.",
+    "Hackathon Tracker": "Tool to track hackathons, teams, and submissions.",
+    // generic fallback for others
+    "default": "Project description placeholder — update with details, tech stack, and links."
+  },
+  quotes: [
+    "Code with purpose, dream with logic.",
+    "Every system I build is a reflection of passion and growth.",
+    "Innovation begins where comfort ends."
+  ],
+  contacts: {
+    email: "bridgetrethabile37@gmail.com",
+    phone: "0646785516",
+    github: "https://github.com/RethabileBridgetVelelo",
+    youtube: "https://www.youtube.com/",
+    tiktok: "https://www.tiktok.com/",
+    instagram: "https://www.instagram.com/",
+    linkedin: "https://www.linkedin.com/",
+    stackoverflow: "https://stackoverflow.com/",
+    codepen: "https://codepen.io/",
+    leetcode: "https://leetcode.com/"
+  }
+};

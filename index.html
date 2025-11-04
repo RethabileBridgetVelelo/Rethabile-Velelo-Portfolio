@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rethabile Bridget Velelo — Portfolio</title>
+  <meta name="description" content="Portfolio of Rethabile Bridget Velelo — Aspiring Software Developer, Frontend & Networking, AI/ML.">
+  <meta name="keywords" content="Rethabile, Rethabile Bridget Velelo, Software Developer, AI, ML, Frontend, Networking, Portfolio">
+  <meta name="author" content="Rethabile Bridget Velelo">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rethabile Bridget Velelo — Portfolio">
+  <meta property="og:description" content="Aspiring Software Developer • Frontend • Networking • AI/ML">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kunstler+Script&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- custom star cursor element (follows mouse) -->
+  <div id="star-cursor" aria-hidden="true"></div>
+
+  <!-- glitter container -->
+  <div id="glitter-container" aria-hidden="true"></div>
+
+  <!-- top bar (book spine + nav) -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="initials">RB</div>
+      <div class="brand-text">
+        <div class="brand-name">Rethabile Bridget Velelo</div>
+        <div class="brand-sub">Aspiring Software Developer • Support Services • AI & ML</div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button class="small-btn" id="voice-toggle" title="Toggle voice">🔈 Voice</button>
+      <a class="small-btn" href="mailto:bridgetrethabile37@gmail.com">Email</a>
+      <a class="small-btn" href="https://github.com/RethabileBridgetVelelo" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <!-- book container for pages (perspective for 3D flip) -->
+  <main id="book" class="book">
+    <!-- pages as children -->
+    <article id="page-home" class="page active" data-index="0">
+      <div class="page-inner">
+        <section class="hero">
+          <div class="name-wrap">
+            <h1 id="hero-name">Rethabile Bridget Velelo</h1>
+            <p id="hero-sub" class="subheading">Aspiring Software Developer| Frontend | Networking | AI/ML</p>
+          </div>
+
+          <div class="hero-grid">
+            <div class="profile-card">
+              <img class="profile-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Profile (replace)">
+              <div class="profile-contact">
+                <div class="pname">Rethabile Bridget Velelo</div>
+                <div class="ploc">Bloemfontein, South Africa</div>
+                <div class="pcontact"><a href="mailto:bridgetrethabile37@gmail.com">bridgetrethabile37@gmail.com</a> • <a href="https://wa.me/27646785516?text=I%20am%20interested%2C%20I%20am%20Rethabile%20from%20[place]" target="_blank">0646785516</a></div>
+              </div>
+            </div>
+
+            <div class="intro">
+              <h2>About</h2>
+              <p><strong>Hi, I'm Rethabile.</strong> I design interactive front-end experiences, prototype AI assistants, and build reliable support systems. I focus on accessible, polished UI and practical AI/ML tools for research and real-world use.</p>
+
+              <h3>Core areas</h3>
+              <ul>
+                <li>Frontend: HTML, CSS, JavaScript, React (familiar)</li>
+                <li>Networking: LAN/WAN basics, troubleshooting, connectivity tools</li>
+                <li>Support Services: documentation, onboarding, user-focused solutions</li>
+                <li>AI/ML: prototyping, visualization, assistant integration</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </article>
+
+    <article id="page-projects" class="page" data-index="1">
+      <div class="page-inner">
+        <section class="projects-section">
+          <div class="projects-header">
+            <h2>Projects</h2>
+            <div class="projects-controls">
+              <input id="project-search" placeholder="Search projects..." aria-label="Search projects">
+              <button id="project-search-btn">Search</button>
+              <button id="projects-reset">Reset</button>
+            </div>
+          </div>
+
+          <div id="projects-container" class="projects-grid" aria-live="polite"></div>
+        </section>
+      </div>
+    </article>
+
+    <article id="page-cv" class="page" data-index="2">
+      <div class="page-inner">
+        <section class="cv-section">
+          <h2>Curriculum Vitae</h2>
+          <div class="cv-layout">
+            <aside class="cv-nav">
+              <button class="cv-tab" data-tab="summary">Summary</button>
+              <button class="cv-tab" data-tab="education">Education</button>
+              <button class="cv-tab" data-tab="skills">Skills</button>
+              <button class="cv-tab" data-tab="projects">Projects</button>
+              <button class="cv-tab" data-tab="contact">Contact</button>
+            </aside>
+
+            <div class="cv-viewer" id="cv-viewer">
+              <!-- content filled by JS -->
+            </div>
+          </div>
+
+          <div class="cv-actions">
+            <button id="download-cv">Download CV (PDF)</button>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <article id="page-ai" class="page" data-index="3">
+      <div class="page-inner">
+        <section class="ai-section">
+          <h2>RethAI — Ask Me</h2>
+          <div class="ai-controls">
+            <input id="ai-input" placeholder="Ask about projects, qualifications, or contact..." aria-label="AI input">
+            <button id="ai-search">Search</button>
+            <button id="ai-speak-btn">Speak</button>
+          </div>
+
+          <div id="ai-chat" class="ai-chat" role="log" aria-live="polite"></div>
+        </section>
+      </div>
+    </article>
+
+    <article id="page-contact" class="page" data-index="4">
+      <div class="page-inner">
+        <section class="contact-section">
+          <h2>Reach Me</h2>
+          <div class="reach-grid">
+            <div class="reach-block">
+              <h3>Contact</h3>
+              <p>Email: <a href="mailto:bridgetrethabile37@gmail.com">bridgetrethabile37@gmail.com</a></p>
+              <p>WhatsApp: <a href="https://wa.me/27646785516?text=I%20am%20interested%2C%20I%20am%20Rethabile%20from%20[place]" target="_blank">0646785516</a></p>
+              <p>GitHub: <a href="https://github.com/RethabileBridgetVelelo" target="_blank">github.com/RethabileBridgetVelelo</a></p>
+            </div>
+
+            <div class="reach-block">
+              <h3>Social</h3>
+              <p>YouTube: <a id="link-youtube" href="https://www.youtube.com/" target="_blank">YouTube</a></p>
+              <p>TikTok: <a id="link-tiktok" href="https://www.tiktok.com/" target="_blank">TikTok</a></p>
+              <p>Instagram: <a id="link-instagram" href="https://www.instagram.com/" target="_blank">Instagram</a></p>
+              <p>LinkedIn: <a id="link-linkedin" href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
+            </div>
+
+            <div class="reach-block">
+              <h3>Coding Platforms</h3>
+              <p>StackOverflow: <a id="link-so" href="https://stackoverflow.com/" target="_blank">StackOverflow</a></p>
+              <p>CodePen: <a id="link-codepen" href="https://codepen.io/" target="_blank">CodePen</a></p>
+              <p>LeetCode: <a id="link-leetcode" href="https://leetcode.com/" target="_blank">LeetCode</a></p>
+            </div>
+          </div>
+
+          <p class="small-note">Tip: Replace placeholders with your real profile links for best results.</p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <!-- navigation footer (book tabs) -->
+  <nav class="book-nav">
+    <button class="book-btn" data-target="page-home">Home</button>
+    <button class="book-btn" data-target="page-projects">Projects</button>
+    <button class="book-btn" data-target="page-cv">CV</button>
+    <button class="book-btn" data-target="page-ai">RethAI</button>
+    <button class="book-btn" data-target="page-contact">Reach Me</button>
+  </nav>
+
+  <!-- project modal -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <h3 id="modal-title">Project Title</h3>
+      <img id="modal-thumb" src="" alt="" style="max-width:100%;border-radius:8px;display:none;margin:10px 0">
+      <p id="modal-desc"></p>
+      <div style="margin-top:12px"><a id="modal-gh" href="#" target="_blank" class="modal-btn">View Code</a></div>
+    </div>
+  </div>
+
+  <!-- farewell toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> Rethabile Bridget Velelo — All rights reserved</div>
+  </footer>
+
+  <!-- libraries -->
+  <script src="knowledge.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
